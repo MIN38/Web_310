@@ -5,80 +5,84 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ex_song</title>
+        <!-- 내부스타일시트 - 함께 작성 -->
+        <style>
+            div {margin-bottom: 50px;}
+
+            .reb a {color:gray;}
+            .reb p {background-color:grey;
+            padding: 10px;}
+
+            .air a {color: palevioletred;}
+            .air p {background-color:plum;
+                padding: 10px;}
+
+            .cow a {color: green;}
+            .cow p {background-color: palegreen;
+                padding: 10px;}
+        </style>
     </head>
     <body>
 
-        <h1>
-            <a1
-                href="https://terms.naver.com/entry.naver?docId=3653210&cid=59416&categoryId=59416"
-                target="_blank">산토끼</a1>
-        </h1>
-        <p><img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/White-tailed_Jackrabbit.jpg/1200px-White-tailed_Jackrabbit.jpg"
-            alt=""
-            width="300"
-            heighy="200"><br></p>
+        <div class="reb">
+            <h1>
+                <a href="https://terms.naver.com/entry.naver?docId=3653210&cid=59416&categoryId=59416"
+                    target="_blank">산토끼</a>
+            </h1>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/White-tailed_Jackrabbit.jpg/1200px-White-tailed_Jackrabbit.jpg"
+                alt=""
+                width="300"
+                heighy="200"><br>
 
-        <div id="box1">
-            <p>산<b>토끼 토끼</b>야 어디를 가느냐<br/>
-                <b>깡총깡총</b>
-                뛰면서 어디를
-                <em>가느냐</em>
-            </p>
-    
-        </div>
+                <p>
+                    산<b>토끼 토끼</b>야 어디를 가느냐<br/>
+                    <b>깡총깡총</b>
+                    뛰면서 어디를
+                    <em>가느냐</em>
+                </p>
+            </div>
         <hr>
 
-        <h1>
-            <a2
-                href="https://terms.naver.com/entry.naver?docId=3615241&cid=59416&categoryId=59417"
-                target="_blank">비행기</a2>
-        </h1>
-        <p><img
+        <div class="air">
+            <h1>
+                <a 
+                    href="https://terms.naver.com/entry.naver?docId=3615241&cid=59416&categoryId=59417"
+                    target="_blank">비행기</a>
+            </h1>
+            <img
             src="http://image.dongascience.com/Photo/2020/03/32ee9fae42b5b0a8f466d61ba2acc281.jpg"
             alt=""
             width="300"
-            height="200"><br></p>
-
-            <div id="box2"><p>
+            height="200"><br>
+            <p>
                 <b>떴다떳다</b>
                 비행기<br>
                 <b>날아라 날아라 높이높이</b>
                 <em>날아라</em>
             </p>
-    </div>
+        </div>
         
         <hr>
+        <div class="cow">
+            <h1>
+                <a class="cow" href="https://tv.naver.com/v/11581464" target="_blank">송아지</a>
+            </h1>
 
-        <h1>
-            <a3 href="https://tv.naver.com/v/11581464" target="_blank">송아지</a3>
-        </h1>
-        
-        <p><img
+            <img
             src="https://www.palnews.co.kr/news/photo/202103/205856_45461_4026.jpg"
             alt=""
             width="300"
-            height="200"><br></p>
-        
-            <div id="box3"><p>
-                <div> </div>
+            height="200"><br>
+
+            <p>
                 <b>송아지 송아지</b>
                 얼룩송아지<br>
                 엄마 소도 얼룩소 엄마
                 <em>닮았네</em>
-            </p></div>
-        
-<style>
-    a1 {color:gray;}
-    a2 {color: blueviolet;}
-    a3 {color: green;}
-    #box1 {background-color:grey;
-        padding: 5px;}
-#box2 {background-color: plum;
-    padding: 5px;}
-#box3 {background-color: palegreen;
-    padding: 5px;}
-div {margin-bottom: 50px;}
-</style>
+            </p>
+
+        </div>
+
     </body>
 </html>
