@@ -1,0 +1,56 @@
+@charset 'utf-8';
+
+
+.boxA::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.boxA > .box1 {
+    float: left;
+    width: 20%;
+}
+.boxA > .box2 {
+    float: left;
+    width: 80%;
+}
+
+
+
+.boxC::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.boxC > .box1 {
+    float: left;
+    width: 33.3333%;
+}
+.boxC > .box2 {
+    float: left;
+    width: 33.3333%;
+}
+.boxC > .box3 {
+    float: left;
+    width: 33.3333%;
+}
+
+
+
+/* .boxD::after {
+    content: "";
+    clear: both;
+    display: block;
+} */
+.boxD {display: flex;}
+
+.boxD > .box1 {
+    float: left;
+    width: 20%;
+}
+.boxD > .box2 {
+    float: left;
+    width: 80%;
+}
