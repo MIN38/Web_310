@@ -1,0 +1,109 @@
+/* 언어설정 */
+@charset 'UTF-8';
+
+/*
+/* .box0 {display: flex;;}
+
+.box1 {width: 20%;}
+.boxA-1 {height: 20%;}
+.boxA-2 {height: 80%;}
+
+.box2 {width: 80%;}
+.boxB {height: 40%;}
+.boxC {height: 20%;}
+.boxD {height: 20%;}
+----------------------------------------------------
+
+/* 플렉스가 아닌 구조 
+/* 박스A와 박스A-2의 가로정렬
+.boxA {width: 20%;
+        float: left;}
+        
+.boxA-2 {width: 70%;
+        float: left;}
+
+.wrap::after {content: "";
+                clear: both;
+                display: block;}
+
+/* 박스3과 박스4의 가로정렬
+.box3 {float: left;
+     width: 33.3333%;}
+.box4 {float: left;
+     width: 33.3333%;}
+.box5 {float: left;
+     width: 33.3333%;}
+
+.boxC {content: "";
+        clear: both;
+        display: block;}
+
+/* 박스6과 박스 7의 가로정렬 
+.box6 {float: left;
+         width: 80%;}
+.box7 {float: left;
+         width: 20%;}
+
+.boxD {content: "";
+        clear: both;
+        display: block;}
+        --------------------------------------------------------------*/
+
+/* 플렉스 정렬방식 */
+
+@media (min-width:320px) {
+
+    /* 박스D를 플렉스 정렬 */
+.boxD {display: flex;}
+.box6 {width: 80%;}
+.box7 {width: 20%;}
+}
+
+@media (min-width:600px) {
+
+    /* 박스C를 플렉스 정렬 */
+.boxC {display: flex;
+        height: 1200px;
+        flex-flow: row wrap ;
+    align-items: center;
+    align-content: center;}
+        /* justify-content: space-between; */
+        /* justify-content: space-around; */
+
+    
+/* 안쓰면 nowrap 이 기본값, nowarp 작성시 모바일에서도 자동으로 조절된다 wrap은 아이템을 그대로 존중*/
+/* felx-wrat :wrap;
+flex-fow :row wrap;
+flex-direction :row; */
+
+
+.box3 {width: 50%;
+        order:0}
+.box4 {width: 50%;
+        order:0}
+.box5{width: 50%;
+    order:0}  
+
+.box5{align-self: flex-end;} /* i */
+.boxC>div {flex: 1;}
+
+
+
+
+
+}
+
+
+
+
+@media (min-width:960px) {
+/* wrap 플렉스정렬 */
+.wrap {display: flex;}
+
+.boxA { width: 20%;
+        display:flex;
+        flex-direction: column;}
+.boxA>div {flex: 1;}
+
+.boxA-2 { width: 80%;}
+}
