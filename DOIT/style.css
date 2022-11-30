@@ -1,0 +1,92 @@
+/* 언어설정 */
+@charset "UTF-8";
+
+/* 전체설정 */
+* {margin: 0; padding: 0;}
+/* 마진과 패딩값을 0으로 초기화 */
+
+#wrap {display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /*flex-flow:row wrap(교재는 이렇게씀, 풀어서 쓰는것이 flex-direction : row; 와 flex-wrap:wrap;) */
+        /* 가로로 여러줄 배치하는 row wrap */
+        width: 90%;
+        /* margin: 0 5% 05%; */ 
+        /* 안의 10%를 나눠서 작성한 것 */
+        margin: 0 auto;
+        /* 화면중앙에 배치시키는 구조로 위의 주석의 magin을 더 편리하게 작성하는 auto */
+    
+    }
+    /* 해더설정 */
+    /* 클래스 이름을 부르는것여서 .을 찍고 부르기, 태그를 부른것이 아님 */
+    .header {display: flex;
+            width: 100%;
+            position: relative;
+            justify-content: end;}
+            /* position: relative은 나를 중심으로 다녀 */
+            /* 겹쳐지면서 가로 너비가 줄은것을 justify-content: end를 통해서 돌려두기 */
+
+    .header>h1 {
+            background-color: #ff6b57;
+            width: 12.5%;
+            height: 142px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        /* position을하면 뛰어두는것이 문제이니 확인하고 사용하기 */
+            /* h1인 로고가 문제인것 */
+
+    .header>nav {
+        background-color: #ff6b57;
+        width: 87.5%;
+        height: 80px;
+    }
+    /* h1과 nav는 .이 안찍히는것이 맞음 반드시 {}만들어두기 */
+
+
+    /* 슬라이더 영역 */
+    .slider_section {
+        width: 50%;
+        background-color: #3c90be;
+        height: 440px;
+    }
+
+    /* 갤러리 영역 */
+    .gallery_section {background-color: #f8de73;
+    width: 27%;
+    }
+    /* height를 안하는 이유는 앞의 슬라이더에 걸어주어서 안해도 됨
+    이유는 엑셀처럼 앞에 걸어두면 뒤는 배열되기 때문 */
+
+    /* 인기검색어 영역 */
+    .rankup_section {background-color: #00d2a5;
+                    width: 23%;}
+
+    /* 최신글 영역 */
+    .latest_post_section {background-color: #9cabe4;
+                        width: 30%;
+                        height: 270px;}
+
+    /* 인기글 영역 */
+    .popular_post_section {background-color: #d76817;
+                            width: 30%;}
+                        
+    /* 배너 영역 */
+    .banner_section {width: 23%;
+                    display: flex;
+                    flex-direction: column;
+    }
+
+    .banner_section>div {flex: 1;}
+    .banner_box_01 {background-color:#0175bb ;}
+    .banner_box_02 {background-color:#1261c9 ;}
+
+    /* SNS 영역 */
+    .social_section {background-color: #fe6eda;
+                    width: 17%;}
+    
+    /* 푸터영역 */
+    .footer {width: 100%;
+            background-color: #474747;
+            height: 94px;}
