@@ -1,0 +1,79 @@
+/* 언어설정 */
+@charset "utf-8";
+
+/* 전체설정 */
+* {margin: 0; padding: 0;}
+
+#wrap {display: flex;
+        flex-direction: row;
+        flex-wrap:wrap ;
+        width: 90%;
+        margin: 0 auto;
+        }
+
+/* 헤더설정 */
+.header {display: flex;
+        width: 100%;
+        position: relative;
+        justify-content: end;
+        }
+
+.header>h1 {
+            background-color: #ffc8dd;
+            width: 14%;
+            height: 150px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            }
+
+.header>nav {
+            background-color: #ffc8dd;
+            width: 86%;
+            height: 90px;
+            }
+
+/* 슬라이더 영역 */
+.slider_section {
+                width: 40%;
+                background-color :#cdb4db;
+                height: 500px;
+                }
+
+/* 갤러리 영역 */
+.galley_section { background-color: #bde0fe; ;
+                width: 40%;
+}
+
+/* 정보글 영역 */
+.info_post_section { background-color: #ffafcc; ;
+    width: 20%;
+}
+
+/* 좋아하는것 글 영역 */
+.favorite_post_section {background-color:#f7f4d7;
+                        width: 25%;
+                        height: 400px;}
+
+/* SNS 영역 */
+.social_section {background-color: #fde4cf;
+                width: 15%; }
+
+/* 배너 영역 */
+.banner_section {width: 30%;
+                display: flex;
+                flex-direction:column ;}
+
+.banner_section>div {flex: 1;}
+.banner_box_01 {background-color:#ffcfd2;}
+.banner_box_02 {background-color:#f7ed6ec9;}
+
+/* 포스트 영역 */
+.brand_post_section {background-color:#83ecac ;
+                width: 30%;}
+
+
+/* 푸터영역 */
+.footer { width: 100%;
+        background-color:#98f5e1 ;
+    height: 100px;}
