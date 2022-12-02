@@ -22,7 +22,7 @@
     .header {display: flex;
             width: 100%;
             position: relative;
-            justify-content: end;}
+            justify-content: flex-end;}
             /* position: relative은 나를 중심으로 다녀 */
             /* 겹쳐지면서 가로 너비가 줄은것을 justify-content: end를 통해서 돌려두기 */
 

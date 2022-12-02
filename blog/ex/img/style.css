@@ -1,0 +1,75 @@
+/* 언어설정 */
+@charset "UFT-8";
+/* 구글폰트설정 */
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {list-style: none;}
+
+a {color: black;}
+
+/* 기본CSS */
+/* 로고설정 */
+
+.logo {font-size: 30px; 
+        font-weight: normal;
+        font-family: 'Paytone One', sans-serif;}
+.logo a {color: #000;
+        text-decoration: none;}
+
+
+/* 메뉴설정 */
+.gnb>ul {display:flex;}
+.gnb>ul>li {width: auto;}
+.gnb>ul>li>a {display: block;
+padding: 15px;
+font-size: 14px;}
+
+.box2 {background-color: #7cbac1;}
+
+
+
+
+
+
+
+
+
+/* 미디어쿼리 구간############################################################################################################### */
+/* 모바일 구간 */
+
+/* 태블릿 구간 */
+/* 768px 이상일때 ################################## */
+@media (min-width:768px) {
+    /* 박스3과 박스4의 가로정렬 */
+
+    .box3 {
+        width: 70%;
+        float: left;
+            }
+
+    .box4 {
+        width: 30%;
+        float: left;
+        }
+        .boxA::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+        
+}
+/* 웹 구간 */
+/* 1280px 이상일때################################ */
+@media (min-width:1280px) {
+    .box1,.boxA {width: 1190px;
+        margin: 0 auto;}
+        /* margin은 상하는 0으로가고 auto는 자동으로해라 :가운데 배열 */
+
+
+}
