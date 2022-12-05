@@ -8,8 +8,7 @@
 body {
     font-family: 'Poor Story', cursive;
     line-height: 1;
-    background: linear-gradient(to top,#f8d2d2c9,#ffffff );
-}
+    background: linear-gradient(to top,#f8d2d2c9,#ffffff );}
 /* css제너레이터 활용 가능 (미리 CSS를 짜서 줌 ) https://css3generator.com/*/
 
 ul {list-style-type: none;}
@@ -20,11 +19,11 @@ a {color: #333;
 /* 기본CSS */
 
 /* 내부영역설정 */
+body{overflow-x: hidden;}
 #wrap section {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
+    -webkit-box-sizing: border-box;}
 
 /* 인포섹션 설정 */
 .info_section {
@@ -38,7 +37,7 @@ a {color: #333;
 }
 
 .info_list {display: flex;}
-.info_list>li {width: auto;}
+.info_list>li {width: 25%;}
 .info_list>li>a {display: block;
                 padding: 10px;
                 color: #fff;
@@ -66,15 +65,13 @@ a {color: #333;
 
 .header>h1>a {
             display: block;
-            padding: 30px;0
-            color: #fff;
-}
+            padding: 30px 0;
+            color: #fff;}
 
 .header>nav {width: 86%;
             background-color: #ffc8dd;
             display: flex;
-            align-items: center;
-        }
+            align-items: center;}
 
 .gnb {display: flex;}
 .gnb>li {width: auto;}
@@ -97,15 +94,116 @@ a {color: #333;
                         width: 34px;
                         height: 39px;
                         cursor:pointer;
-                        text-indent: -999999px;
-                        background-repeat:no-repeat ;
-}
+                        text-indent: -9999px;
+                        background-repeat:no-repeat ;}
+
+span.prev_btn {background-image: url(../img/slider_arrow.png);
+                                        margin-left: -10px;
+                                        background-position:-10px ;}
+
+/* backgruond는 안되고 꼭 background-imag로 해야지 이미지랑 배경색이 같이들어감 */
+
+.galley_section {display: flex;
+                justify-content: center;
+                align-items: center;}
+
+.galley_list {display: flex;
+            justify-content: column;
+            align-items: wrap;
+            padding: 30px 0px;}
+
+.galley_list li {width: 200px;
+                height: auto;
+                padding: 10px;}
+
+.galley_list li a {display: block;}
+
+.galley_list figure {text-align: center;}
+
+.galley_list img {width: 100%;
+                    height: auto;}
+                    
+.galley_list figcaption {margin-top: 10px;}
+
+/* 브랜드 페이지 영역 */
+.B_rankup_section {display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;}
+
+.B_rankup_section title {margin-bottom: 30px;
+                        font-size: 20px;
+                        text-align: center;
+                        color: #000;}
+
+.B_rankup_section .B_rankup_list {}
+
+.B_rankup_section .B_rankup_list>li {}
+
+.B_rankup_section .B_rankup_list>li>a {display: block;
+                                        padding: 10px;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        color: #000;}
+
+/* span 안에서 쓰면 붙여쓰기, 자손자는 뛰어쓰기 */
+
+/* 내가 좋아하는 것 영역 */
+.favorite_post_section {}
+.favorite_post_section title {}
+.favorite_post_section .favorite_post_list {}
+.favorite_post_list>li {}
+.favorite_post_list>li>a {}
+
+/* sns영역 */
+.social_section {}
+.social_section .social_list {}
+.social_list>li {}
+.social_list>li>a {}
+
+/* 베너영역 */
+.banner_section {}
+.banner_box_01 {display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 135px;}
+/* display 사용이 쉽다 */
+.banner_box_01>a {display: block;
+                    width: 100px;}
+.banner_box_01>a>svg {width: 100px;
+                        height: auto;
+                    fill: #fff;}
+/* svg는 부모의 영향을 받아옴 그래서 width안써도 되지만
+img는 무조건 써야한다. */
+/* svg는 fill로 들어가야한다, 선도 들어간다. */
+.banner_box_02 {height: 135px;
+                display: flex;
+                justify-content: center;
+                align-items: center;}
+.banner_box_02 .banner_list {display: flex;}
+.banner_box_02 .banner_list>li {}
+.banner_box_02 .banner_list>li>a {display: block;
+                                    width: 50px;
+                                    padding: 0 10px;}
+.banner_box_02 .banner_list li a svg {fill: #fff;}
+
+/* 인기글 영역 */
+.popular_post_section {}
+.popular_post_section title {}
+.popular_post_section title .popular_post_list {}
+.popular_post_list li {}
+.popular_post_list li a {}
 
 
 
 
+/* 푸터 영역 */
+.footer {}
+.footer p {font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            padding: 40px 20px;
+            letter-spacing: 2px;}
+            /* letter-spacing : 자간설정  */
 
-
-
-#wrap {display: flex;
-    flex-wrap: wrap;}
+/* 영역설정!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */

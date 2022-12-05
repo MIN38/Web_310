@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0", minmun-scale="1", masimum-scle="1", user-scalable="no" >
     <title>나의소개</title>
 
     <!-- 폰트어썸 연결 -->
@@ -15,15 +15,30 @@
         <script src="https://use.fontawesome.com/aa16dd21b2.js"></script>
         <!-- 위에는 fontawesome에서 이메일로 등록 코드 부여 받은 것 -->
 
-
     <!-- 외부스타일 시트 -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="ex_reset.css">
         <!-- 지금은 css파일이 2개지만 1개로 만들어도 됨 2개다 연결해 주기 -->
 
+<!-- 자바스크립트 -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<!-- 자바스크릡트 동적 구현 -->
+<script>
+    // 메뉴버튼을 클릭했을 때, gnb를 보이게 해라
+    $(document).ready(function(){
+        $('.menu_toggle_btn').click(function(){
+            $('gnb').slideToggle()
+
+        })
+
+    })
+</script>
+
+
 </head>
 
-<!-- 2022.12.02일 오탈자 및 업데이트 진행 -->
+<!-- 2022.12.05일 오탈자 및 업데이트 진행 -->
 <body>
     <div id="wrap">
         
@@ -40,7 +55,8 @@
             </section>
             
             <h1 class="logo"><a href="index.html">
-                <img src="img/flower.png" alt=""><span>나의 정보</span></a></h1>
+                <img src="img/flower.png" alt="" width="100" height="100"><br><span>나의 정보</span></a></h1>
+                
             <!-- h1은 로고(세로) -->
 
             <nav class="nav">
@@ -54,19 +70,19 @@
             <span class="menu_toggle_btn">전체 메뉴 토글버튼</span>
             <!-- nav는 헤더(가로) -->
         </header>
-
+            <!-- 슬라이더 섹션 -->
         <section class="slider_section">
             <span class="prv_btn">이전버튼</span>
             <span class="next_btn">다음버튼</span>
         </section>
 
-
+        <!-- 갤러리 섹션 -->
         <section class="galley_section">
             <ul class="galley_list">
                 <li>
                     <a href="#">
                         <figure>
-                            <img src="img/토끼.jpg" alt="">
+                            <img src="img/토끼.jpg" alt="" >
                         <figcaption>
                             CUTE바로가기
                         </figcaption>
@@ -150,7 +166,7 @@
 <!-- 선생님이랑 같이 만든것 기준: 5.social_section-->
     <section class="popular_post_section">
         <h2 class="title">인기글</h2>
-        <ul class="popi;ar_post_list">
+        <ul class="popular_post_list">
             <li><a href="#">인기글1</a></li>
             <li><a href="#">인기글2</a></li>
             <li><a href="#">인기글3</a></li>

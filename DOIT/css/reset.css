@@ -17,7 +17,11 @@ a {color: #333;
 
 /* 기본CSS */
 
+
+
+
 /* 내부영역설정 */
+body{overflow-x: hidden;}
 #Wrap section {box-sizing: border-box;
                 -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;}
@@ -35,7 +39,7 @@ a {color: #333;
 
 
 .info_list {display: flex;}
-.info_list>li {width: auto;}
+.info_list>li {width: 25%;}
 .info_list>li>a {display: block;
                     padding: 10px;
                 color: #fff;
@@ -142,27 +146,134 @@ align-items: center;
 .rankup_section .rankup_list>li>a  {display: block;
                                     padding: 10px;
                                     font-size: 14px;
-                                    counter-reset:#fff;    
+                                    color:#fff;    
                                     font-weight:bold ;}
 
 /* span 안에서 쓰면 붙여쓰기, 자손자는 뛰어쓰기 */
 /* counter-reset : 뭐더라...? */
 
+/* 최근글영역 */
+.latest_post_section {display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;}
+
+.latest_post_section .title {margin-bottom: 30px;
+                        font-size: 20px;
+                        text-align: center;
+                        color: #fff;}
+.latest_post_section .popular_post_list {}
+.latest_post_list .li {}
+.latest_post_list>li>a {display: block;
+                     padding: 10px;
+                    font-size: 14px;
+                    color:#fff;    
+                    font-weight:bold ;}
+
+/* 인기글영역 */
+.popular_post_section {display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;}
+
+.popular_post_section .title {margin-bottom: 30px;
+        font-size: 20px;
+        text-align: center;
+        color: #fff;}
+.popular_post_section .popular_post_list {}
+.popular_post_list .li {}
+.popular_post_list>li>a {display: block;
+     padding: 10px;
+    font-size: 14px;
+    color:#fff;    
+    font-weight:bold ;}
+
+/* 베너 영역 */
+.banner_section {}
+.banner_box_01 {display: flex;
+                justify-content: center;
+                align-items: center;
+            height: 135px;
+            }
+/* display 사용이 쉽다 */
+.banner_box_01 a {display: block;
+                    width: 100px;}
+.banner_box_01 svg {width: 100px;
+                    height: auto;
+                    fill: #fff;
+                    }
+/* svg는 부모의 영향을 받아옴 그래서 width안써도 되지만
+img는 무조건 써야한다. */
+/* svg는 fill로 들어가야한다, 선도 들어간다. */
+
+.banner_box_02 { height: 135px;
+                display: flex;
+                justify-content: center;
+                align-items: center;}
+.banner_box_02 .banner_list {display: flex;}
+/* 오류확인 : f12눌러서 확인 선이 그려지면 오류 
+선이 없으면 다른거에 영향으로 밀렸다. */
+.banner_box_02 .banner_list li {}
+.banner_box_02 .banner_list li a {display: block;
+                                width: 42px;
+                                padding: 0 10px;
+                                }
+.banner_box_02 .banner_list li a svg {fill: #fff;}
+
+
+/* SNS 영역 */
+.social_section {display: flex;
+                justify-content: center;
+                align-items: center;}
+.social_section .social_list {}
+.social_list_li {margin: 10px 0;}
+
+.social_list li a {
+                display: flex;
+                 width: 55px;
+                height: 55px;
+                justify-content: center;
+                align-items: center;
+                /* 자간설정으로 내리기
+                display: block;
+                 width: 55px;
+                height: 55px;
+                text-align: center;
+                line-height: 3; 
+                */
+                
+                background-color: #333;
+                border-radius: 50px;}
+                /* 플렉스일때는 justify-content: center;
+                align-items: center (가장 쉬운 방법)
+                 display: block일때는 text align*/
+
+.social_list li a i {color: #fff;
+                    font-size: 20px;}
+
+/* 순번은 형제가 있는 li에게 붙이기 */
+
+.social_list li:nth-child(1) a {background-color: #1da1f2 ;}
+.social_list li:nth-child(2) a {background-color: #1877f2 ;}
+.social_list li:nth-child(3) a {background-color: #ff0000 ;}
+/* https://brandcolors.net/ */
 
 
 
 
 
-
-
-
-
-
-
+/* 푸터 설정 */
+.footer {}
+.footer p {font-size: 14px;
+            font-weight: bold;
+            color:#fff;
+            padding: 40px 20px;
+            letter-spacing: 2px;}
+          
 
 
 /* 영역설정!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
+ 
 /* 헤더 영역 */
 .header {order: 1;}
 
@@ -216,8 +327,147 @@ align-items: center;
     
 }
 
-/* 태블릿구간 768px  */
-@media (min-width:768px) {
+/* 태블릿구간 768px이상 1139px 이하 구간  */
+@media (min-width:768px) and (max-width:1139px)
+{ 
+/* 인포섹션 설정 */
+.info_section {
+    order: 0;
+    position: relative;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    background-color: #2ecc71;
+}
+
+
+.info_list {display: flex;
+            width: 100%;}
+
+.info_list>li {width: 25%;}
+.info_list>li>a {display: block;
+                    padding: 10px;
+                color: #fff;
+            font-size: 20px;
+            text-align: center;}
+
+
+/* 헤더영역 */
+.header {width: 100%;
+    flex-wrap: wrap;}
+    .header>h1 {width: 15%;
+                position: absolute;
+                left: 0;
+                top: 40px;
+            font-size: 21px;
+        line-height: 1.3;
+        text-align: center;
+        background-color: #2ecc71;
+        z-index: 10;}
+    
+    
+    .header>h1>a {display: block;
+                    padding: 30px 0;
+                color: #fff;}
+    
+    .header>nav {width: 100%;
+                background-color: #2ecc71;
+                display: flex;
+            align-items: center;
+            position: relative;}
+    
+    .gnb {display: none; /* 토글버튼 클릭시 변화할 부분 */
+            flex-direction: column;
+            position: absolute;
+            flex-wrap: wrap;
+        top:80px;
+        right: -60%;
+        width: 100%;}
+    .gnb>li {width: 40%;
+            background-color: #2c3250;
+            position: relative;
+            display: flex;
+        }
+    .gnb>li>a {display: block;
+                font-size: 20px;
+                padding: 20px 10px;
+                color: #fff;}
+
+
+/* 토글버튼 */
+.sub_menu_toggle_btn {display: block;
+    background-image: url(../img/sub_menu_toggle_btn.png);
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                text-indent: -9999px;
+                padding: 20px 0;
+                background-size: contain;
+                position: absolute;
+                right: 20px;
+                top: 20px;}
+
+
+
+
+.menu_toggle_btn {display: block;
+                position: absolute;
+            z-index: 60;
+        top: 70px;
+        right: 50PX;
+    background-image: url(../img/menu_toggle_btn.png);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 영역설정!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+ 
+/* 헤더 영역 */
+.header {order: 1;}
+
+/* 슬라이더 영역 */
+.slider_section {order: 2;}
+
+/* 갤러리 영역 */
+.gallery_section {order: 7;}
+
+/* 인기검색어영역 */
+.rankup_section {order: 3;}
+
+/* 최신글 영역 */
+.latest_post_section {order: 4;}
+
+/* 인기글영역 */
+.popular_post_section {order: 5;}
+
+/* 베너섹션 */
+.banner_section {order: 8;}
+
+/* SNS섹션 */
+.social_section {order: 6;}
+
+/* 푸터영역역  */
+.footer {order: 9;}
+
+
 
 
 
@@ -232,8 +482,8 @@ align-items: center;
 
 
 
-/* 웹구간 1280px */
-@media (min-width:1280px) {
+/* 웹구간 1140px */
+@media (min-width:1140px) {
 
 }
 
