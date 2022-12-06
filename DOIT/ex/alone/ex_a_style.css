@@ -1,0 +1,77 @@
+/* 언어 설정 */
+@charset "UTF-8";
+
+/* 전체설정 */
+* {margin: 0; padding: 0;}
+/* 마진과 패딩값을 0으로 초기화 */
+
+#wrap {display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /*flex-flow:row wrap */
+         /*flex-flow:row wrap(교재는 이렇게씀, 풀어서 쓰는것이 flex-direction : row; 와 flex-wrap:wrap;) */
+        /* 가로로 여러줄 배치하는 row wrap */
+        width: 90%;
+         /* margin: 0 5% 0 5%; */
+        margin: 0 auto;}
+        /*화면중앙에배치*/
+
+
+/* 헤더 영역 */
+.header {   display: flex;
+            width: 100%;
+            position: relative;
+            justify-content: flex-end;}
+
+/* 헤더 안의 로고 설정 h1=logo */
+.header>h1 { background-color:#FFF5E4 ;
+            width: 12%;
+            height: 140px;
+            position: absolute;
+            left: 0;
+            top: 0;}
+
+/* 헤더 안의 nav설정 */
+.header>nav {   background-color: #FFF5E4;
+                width:88%;
+                height: 80px;}
+
+
+/* 슬라이더 영역 */
+.slider_section {   width: 36%;
+                    background-color: #FFE3E1;
+                    height: 440px;}
+
+
+/* 갤러리 영역 */
+.gallery_section { background-color:#F2D1D1;
+                    width: 36%;}
+
+/* 취미 영역  */
+.hobby_section {background-color:#fab6b6;
+                width: 28%;}
+
+/* 브랜드 영역 */
+.brand_section {background-color:#FEFCF3;
+                width: 25%;}
+
+/* 음악 영역 */
+.music_rankup_section {background-color:#F5EBE0;
+                        width: 25%;}
+
+.banner_section {width: 30%;
+                display: flex;
+                flex-direction: column;}
+.banner_section>div {flex: 1;}
+.banner_box_01 {background-color:#F0DBDB;}
+.banner_box_02 {background-color: #DBA39A;}
+
+/* sns 영역 */
+.social_section {background-color:#FFF5E4 ;
+                width: 20%;}
+
+.footer {width: 100%;
+        background-color: #c7e3ff;
+        height: 94px;}
+        
+/* 2022.12.06 작성 및 수정 */

@@ -1,0 +1,11 @@
+/* 언어설정 */
+@charset "UTF-8";
+
+/* 웹폰트 설정 */
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+/* 전체 설정 */
+body {font-family: 'Poor Story', cursive;
+        line-height: 1;
+        background: linear-gradient(to top, #ffe7f6, #ffffff);
+}
