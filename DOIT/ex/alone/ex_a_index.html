@@ -19,6 +19,22 @@
     <link rel="stylesheet" href="ex_a_style.css">
     <link rel="stylesheet" href="ex_a_reset.css">
 
+    <!-- 자바스크립트 -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <!-- 자바스크립트 동적 구현 -->
+    <script>
+        // 메뉴 버튼을 클릭했을대, gnb를 보이게 하라
+
+        $(document).ready(function(){
+
+        $('.menu_toggle_btn').click(function(){
+            $('.gnb').slideToggle()
+
+        })
+})
+    </script>
+
 </head>
 <body>
     <div id="wrap">
@@ -46,8 +62,8 @@
             <nav class="nav">
                 <ul class="gnb">
                     <li><a href="#">HOME</a><span class="sub_menu_toggle_btn">하위메뉴토글버튼</span></li>
-                    <li><a href="#">SCHEDULE</a><span class="sub_menu_toggle_btn">하위메뉴토글버튼</span></li>
                     <li><a href="#">INTERESTS</a><span class="sub_menu_toggle_btn">하위메뉴토글버튼</span></li>
+                    <li><a href="#">SCHEDULE</a><span class="sub_menu_toggle_btn">하위메뉴토글버튼</span></li>
                     <li><a href="#">ADVANTAGES</a><span class="sub_menu_toggle_btn">하위메뉴토글버튼</span></li>
                 </ul>
             </nav>

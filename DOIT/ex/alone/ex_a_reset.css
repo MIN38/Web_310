@@ -7,5 +7,143 @@
 /* 전체 설정 */
 body {font-family: 'Poor Story', cursive;
         line-height: 1;
-        background: linear-gradient(to top, #ffe7f6, #ffffff);
+        background: linear-gradient(to top, #ffe7f6, #ffffff);}
+        /* css제너레이터 활용 가능 (미리 CSS를 짜서 줌 ) https://css3generator.com/*/
+
+ul {list-style-type: none;}
+a { color :#333;
+        text-decoration: none;}
+img {vertical-align: top;}
+
+/* 기본 css */
+
+/* 내부 영역 설정 */
+
+body {overflow-x: hidden;}
+/* overflow 속성: 가로 또는 세로 축만 스크롤바를 생성
+x축은 왼쪽과 오른쪽의 내용이 더 길 때(가로)
+부모요소의 범위를 넘어가는 자식 요소의 부분은 보이지 않도록 처리한다.
+ (가로 스크롤바가 나타나지 않을 뿐 브라우저에 따라 세로 스크롤바는 나타남) */
+
+#wrap section { box-sizing: border-box;
+        /* box-sizing: border-box - 요소의 너비와 높이를 균일하게 유지해주는 편리한 속성 */
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing:border-box ;}
+
+
+/* 인포섹션 설정 */
+
+.info_section {
+                position: absolute;
+                width: auto;
+                top: 30px;
+                right: 30px;
+                z-index: 50;
+                background-color: #FFF5E4;
 }
+
+.info_list {display: flex;}
+.info_list li {width: auto;}
+.info_list li a {display: block;
+                padding: 10px;
+                color: #333;
+                font-size: 20px;}
+
+
+/* 헤더 영역 */
+/* 토글 버튼 */
+.sub_menu_toggle_btn {display: none;}
+.menu_toggle_btn {display: none;}
+
+.header {z-index: 30;}
+.header h1 { width: 12%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-size: 21px;
+                line-height: 1.3;
+                text-align: center;
+                background-color: #FFF5E4;}
+
+.header h1 a {display: block;
+                padding: 30px 0;
+                color: #333;}
+.header nav {width: 88%;
+                background-color:#FFF5E4;
+                display: flex;
+                align-items: center;}
+
+.gnb {display: flex;}
+.gnb li { width: auto;}
+.gnb li a {display: block;
+                font-size: 25px;
+                padding: 0 50px;
+                color: #333;}
+
+/* 슬라이더 섹션 영역 */
+.slider_section {display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 36%;
+                height: auto;
+                z-index: 10;}
+
+.slider_section>span {width: 34px;
+                        height: 39px;
+                        cursor: pointer;
+                        text-indent: -9999px;
+                        background-repeat: no-repeat;}
+
+                        span.prev_btn {background-image:url(../img/slider_arrow.png) ;
+                                        margin-left: -10px;
+                                background-position: top left;
+                                margin-right: -10px;}
+
+/* backgruond는 안되고 꼭 background-imag로 해야지 이미지랑 배경색이 같이들어감 */
+
+/* 갤러리 영역 설정 */
+
+.gallery_section {display: flex;
+        justify-content: center;
+        align-items: center;}
+
+.gallery_list {display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 30px 0px;}
+        
+.gallery_list>li {width:200px ;
+        height: auto;
+        padding: 10px;}
+        
+.gallery_list>li>a {display: block;}
+
+.gallery_list figure {text-align: center;}
+.gallery_list img {width: 100%;
+            height: auto;}
+.gallery_list figcaption {margin-top: 10px;}
+
+/* 취미 영역 */
+
+.rankup_section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .rankup_section .title {
+        margin-bottom: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;}
+    
+    .rankup_section .rankup_list {}
+    .rankup_section .rankup_list>li {}
+    .rankup_section .rankup_list>li>a {
+        display: block;
+        padding: 10px;
+        font-size: 14px;
+        color: #fff;
+        font-weight: bold;
+    }
