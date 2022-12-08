@@ -125,22 +125,22 @@ x축은 왼쪽과 오른쪽의 내용이 더 길 때(가로)
 
 /* 취미 영역 */
 
-.rankup_section {
+.cosmetics_section {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     
-    .rankup_section .title {
+    .cosmetics_section .title {
         margin-bottom: 30px;
     font-size: 20px;
     text-align: center;
     color: #fff;}
     
-    .rankup_section .rankup_list {}
-    .rankup_section .rankup_list>li {}
-    .rankup_section .rankup_list>li>a {
+    .cosmetics_section .rankup_list {}
+    .cosmetics_section .rankup_list>li {}
+    .cosmetics_section .rankup_list>li>a {
         display: block;
         padding: 10px;
         font-size: 14px;

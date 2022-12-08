@@ -1,109 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Profile_sub_schedule</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile_sub_schedule</title>
 
-        <!-- 폰트 어썸 연결 -->
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-        <!-- 경로 : font awesome4 사용하기 : 이유는 6이 최신이지만 호환성은 4가 좋음 처음 시작할때 font
+    <!-- 폰트 어썸 연결 -->
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <!-- 경로 : font awesome4 사용하기 : 이유는 6이 최신이지만 호환성은 4가 좋음 처음 시작할때 font
         awesome4페이지에서 GetStarted클릭후 링크 연결해주기 방법은 아래와 같음 -->
 
-        <script src="https://use.fontawesome.com/aa16dd21b2.js"></script>
-        <!-- 위에는 fontawesome에서 이메일로 등록 코드 부여 받은 것 -->
+    <script src="https://use.fontawesome.com/aa16dd21b2.js"></script>
+    <!-- 위에는 fontawesome에서 이메일로 등록 코드 부여 받은 것 -->
 
-        <!-- 외부스타일시트 연결 -->
-        <link rel="stylesheet" href="ex_a_style.css">
-        <link rel="stylesheet" href="ex_a_reset.css">
-        <link rel="stylesheet" href="ex_a_sub01.css">
+    <!-- 외부스타일시트 연결 -->
+    <link rel="stylesheet" href="ex_a_style.css" />
+    <link rel="stylesheet" href="ex_a_reset.css" />
+    <link rel="stylesheet" href="ex_a_sub01.css" />
 
-        <!-- 자바스크립트 -->
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- 자바스크립트 -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 
-        <!-- 자바스크립트 동적 구현 -->
-        <script>
-            // 메뉴 버튼을 클릭했을대, gnb를 보이게 하라
+    <!-- 자바스크립트 동적 구현 -->
+    <script>
+      // 메뉴 버튼을 클릭했을대, gnb를 보이게 하라
 
-            $(document).ready(function () {
+      $(document).ready(function () {
+        $(".menu_toggle_btn").click(function () {
+          $(".gnb").slideToggle();
+        });
+      });
+    </script>
+  </head>
 
-                $('.menu_toggle_btn').click(function () {
-                    $('.gnb').slideToggle()
-
-                })
-            })
-        </script>
-
-    </head>
-
-    <body class="ex_a_sub_schedule">
-        <div id="wrap">
-            <header class="header">
-                <section class="info_section">
-                    <ul class="info_list">
-                        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-cutlery" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-music" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
-                    <!-- 폰트 어썸을 통애 아이콘 링크 걸기, 버전 4는 복사 붙여넣기 괜찮
+  <body class="ex_a_sub_schedule">
+    <div id="wrap">
+      <header class="header">
+        <section class="info_section">
+          <ul class="info_list">
+            <li>
+              <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-cutlery" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-music" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+            </li>
+            <!-- 폰트 어썸을 통애 아이콘 링크 걸기, 버전 4는 복사 붙여넣기 괜찮
                     이상 버전은 다운로드 해서 넣기 (호환성 문제) -->
-                    </ul>
-                    <!-- 순서: 홈버튼, 음식버튼(내가 좋아하는 음식), 음악버튼(내가 좋아하는 노래), 하트(관심분야) -->
-                </section>
-                <h1 class="logo">
-                    <a href="ex_a_index.html">
-                        <img src="img/flower.png" alt="" width="100" height="100"><br>
-                        <span>My profile</span>
-                    </a>
-                </h1>
-    
-                <nav class="nav">
-                    <ul class="gnb">
-                        <li><a href="#">HOME</a><span class="sub_menu_toggle_btn">하위메뉴토글버튼</span></li>
-                        <li><a href="#">INTERESTS</a><span class="sub_menu_toggle_btn">하위메뉴토글버튼</span></li>
-                        <li><a href="#">SCHEDULE</a><span class="sub_menu_toggle_btn">하위메뉴토글버튼</span></li>
-                        <li><a href="#">ADVANTAGES</a><span class="sub_menu_toggle_btn">하위메뉴토글버튼</span></li>
-                    </ul>
-                </nav>
-    
-                <span class="menu_toggle_btn">전체 메뉴 토글 버튼</span>
-    
-            </header>
+          </ul>
+          <!-- 순서: 홈버튼, 음식버튼(내가 좋아하는 음식), 음악버튼(내가 좋아하는 노래), 하트(관심분야) -->
+        </section>
+        <h1 class="logo">
+          <a href="ex_a_index.html">
+            <img src="img/flower.png" alt="" width="100" height="100" /><br />
+            <span>My profile</span>
+          </a>
+        </h1>
 
-            <section class="content_section01">
-                <div>
-                    <p>html이란? Hyper text markup language로 웹페이지를 읽을 수 있게 만들어주는 언어이다.</p>
-                    <ul>
-                        <li><a href="글자태그001.html"><img src="http://picsum.photos/200/100" alt=""><span>제목태그와 글자태그</span></a></li>
-                        <li><a href="글자태그002.html"><img src="http://picsum.photos/200/100" alt=""><span>텍스트 태그</span></a></li>
-                        <li><a href="공간태그001.html"><img src="http://picsum.photos/200/100" alt=""><span>div태그/span태그</span></a></li>
-                        <li><a href="이미지와링크태그.html"><img src="http://picsum.photos/200/100" alt=""><span>a태그/img태그</span></a></li>
-                        <li><a href="목록태그001.html"><img src="http://picsum.photos/200/100" alt=""><span>ol/ul태그</span></a></li>
-                        <li><a href="테이블태그001.html"><img src="http://picsum.photos/200/100" alt=""><span>table태그</span></a></li>
-                        <!-- 추후 내용이 추가 될때마다 삽입 -->
-                        <li><a href="시맨틱태그001.html"><img src="http://picsum.photos/200/100" alt=""><span>시맨틱태그의 종류</span></a></li>
-                        <li><a href="입력양식태그001.html"><img src="http://picsum.photos/200/100" alt=""><span>form태그</span></a></li>
-                    </ul>
-                </div>
-            </section>
+        <nav class="nav">
+          <ul class="gnb">
+            <li>
+              <a href="#">HOME</a
+              ><span class="sub_menu_toggle_btn">하위메뉴토글버튼</span>
+            </li>
+            <li>
+              <a href="#">INTERESTS</a
+              ><span class="sub_menu_toggle_btn">하위메뉴토글버튼</span>
+            </li>
+            <li>
+              <a href="#">SCHEDULE</a
+              ><span class="sub_menu_toggle_btn">하위메뉴토글버튼</span>
+            </li>
+            <li>
+              <a href="#">ADVANTAGES</a
+              ><span class="sub_menu_toggle_btn">하위메뉴토글버튼</span>
+            </li>
+          </ul>
+        </nav>
 
-            <section class="content_ex">
-                <div>
-                    <p>학습을 하면서 예제를 만들었던 파일모음</p>
-                    <ul>
-                        <li><a href="ex_song.html"><img src="http://picsum.photos/300/400" alt=""><div class="text">동요모음</div></a></li>
-                        <li><a href="ex_form001.html"><img src="http://picsum.photos/300/400" alt=""><div class="text">수강신청</div></a></li>
-                        <li><a href="ex_form002.html"><img src="http://picsum.photos/300/400" alt=""><div class="text">주문서 작성</div></a></li>
-                        <li><a href="ex_star.html"><img src="http://picsum.photos/300/400" alt=""><div class="text">별헤는 밤</div></a></li>
-                    </ul>
-                </div>
-                <!-- 위쪽에 중첩되도록 들어갈 꺼라서 div로 사용 -->
-            </section>
+        <span class="menu_toggle_btn">전체 메뉴 토글 버튼</span>
+      </header>
 
-            <footer class="footer">
-                <p>Copyright ⓒ 2022. HYOMIN All rights reserved.</p>
-            </footer>
+      <section class="content_section01">
+        <div>
+          <p>
+            html이란? Hyper text markup language로 웹페이지를 읽을 수 있게
+            만들어주는 언어이다.
+          </p>
+          <ul>
+            <li>
+              <a href="글자태그001.html"
+                ><img src="http://picsum.photos/200/100" alt="" /><span
+                  >제목태그와 글자태그</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="글자태그002.html"
+                ><img src="http://picsum.photos/200/100" alt="" /><span
+                  >텍스트 태그</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="공간태그001.html"
+                ><img src="http://picsum.photos/200/100" alt="" /><span
+                  >div태그/span태그</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="이미지와링크태그.html"
+                ><img src="http://picsum.photos/200/100" alt="" /><span
+                  >a태그/img태그</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="목록태그001.html"
+                ><img src="http://picsum.photos/200/100" alt="" /><span
+                  >ol/ul태그</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="테이블태그001.html"
+                ><img src="http://picsum.photos/200/100" alt="" /><span
+                  >table태그</span
+                ></a
+              >
+            </li>
+            <!-- 추후 내용이 추가 될때마다 삽입 -->
+            <li>
+              <a href="시맨틱태그001.html"
+                ><img src="http://picsum.photos/200/100" alt="" /><span
+                  >시맨틱태그의 종류</span
+                ></a
+              >
+            </li>
+            <li>
+              <a href="입력양식태그001.html"
+                ><img src="http://picsum.photos/200/100" alt="" /><span
+                  >form태그</span
+                ></a
+              >
+            </li>
+          </ul>
         </div>
-    </body>
+      </section>
+
+      <section class="content_ex">
+        <div>
+          <p>학습을 하면서 예제를 만들었던 파일모음</p>
+          <ul>
+            <li>
+              <a href="ex_song.html"
+                ><img src="http://picsum.photos/300/400" alt="" />
+                <div class="text">동요모음</div></a
+              >
+            </li>
+            <li>
+              <a href="ex_form001.html"
+                ><img src="http://picsum.photos/300/400" alt="" />
+                <div class="text">수강신청</div></a
+              >
+            </li>
+            <li>
+              <a href="ex_form002.html"
+                ><img src="http://picsum.photos/300/400" alt="" />
+                <div class="text">주문서 작성</div></a
+              >
+            </li>
+            <li>
+              <a href="ex_star.html"
+                ><img src="http://picsum.photos/300/400" alt="" />
+                <div class="text">별헤는 밤</div></a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- 위쪽에 중첩되도록 들어갈 꺼라서 div로 사용 -->
+      </section>
+
+      <footer class="footer">
+        <p>Copyright ⓒ 2022. HYOMIN All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
 </html>

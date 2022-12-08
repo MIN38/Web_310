@@ -1,0 +1,90 @@
+/* 언어설정 */
+@charset "UTF-8";
+
+/* 구글폰트설정 */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+
+/* 전체설정 */
+*{margin: 0; padding: 0;}
+
+ul {list-style: none;}
+
+a{color: rgb(71, 71, 71);}
+
+/* 기본 css */
+
+/* 로고설정 */
+.logo {font-size: 90px;
+    font-weight: normal;
+    font-family:'Amatic SC', cursive;
+    color: rgba(59, 49, 0, 0.623);
+    text-decoration: none;
+    text-align: center;
+    margin-top: 90px;}
+
+header p {font-size: 28px;
+    font-weight: normal;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: rgba(59, 49, 0, 0.438);
+    text-decoration: none;
+    text-align: center;
+    margin-top: 30px; }
+
+/* container 설정 */
+
+.container {display: flex;
+}
+.container .main_section {width: 70%;
+                          margin-bottom: 0;
+                          background-color: #fff;
+                          }
+.container .post_home {}
+.container .post_title {margin-top: 80px;
+                        margin-bottom: 20px;}
+
+.post_title h2 {}
+
+.post_title a {font-size: 35px;
+                font-weight: bold;
+             text-decoration: none;
+             color: rgba(59, 49, 0, 0.623);}
+
+.post_img a::after{content: "";
+                  display: block;
+                  clear:both;}
+
+.post_img {float: left;
+  width: 30px;
+            height: auto;}
+.post_img .date {display: block;
+    font-family:'Amatic SC', cursive;
+            font-size: 35px;
+            border-bottom: dotted 10px #fff;
+            background-color: rgb(185, 224, 224);
+            
+            
+            }
+
+
+.post_img img {}
+
+.post_Story{}
+
+.post_more{}
+
+
+
+
+
+
+.side_section {margin-bottom: 30px;}
+.side_section .cat {margin-top: 0;
+                    margin-top: 0;
+                  border-bottom: 10px;
+                font-size: 20px;}
+
+  /* 푸터 영역 */
+
+  .footer {width: 100%;
+  }
