@@ -60,9 +60,17 @@
 
         document.getElementById('ex').style.background="#363636"
         let ex=document.getElementById('ex');
-        let box1 = ex.getElementsByClassName('box1')[0]
-            ex.style.color='#ffffff'
+        let box1 = document.getElementsByClassName('box1')
 
+        let box =document.getElementsByClassName('current')
+
+        let list = document.querySelector('.box1 li')
+        let listAll=document.querySelectorAll('.box1 li');
+        ex.style.color='#ffffff'
+        box1[0].style.background='#ffff00'
+        box[1].style.background='#ff0000'
+        list.style.color= '#000';
+        listAll.style.color='#000'
     </script>
 </body>
 </html>
