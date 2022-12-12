@@ -3,88 +3,296 @@
 
 /* 구글폰트설정 */
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 
 /* 전체설정 */
 *{margin: 0; padding: 0;}
+ul, ol {list-style: none;}
+a {text-decoration: none;}
 
-ul {list-style: none;}
+/* 제너럴스타일링 */
+body {background-image: linear-gradient(to left,  #efe8d5 50%, #faf6ed 50% );
+  background-size: 70px 100%;}
+  
 
-a{color: rgb(71, 71, 71);}
+/* 헤더 설정---------------------------------------------------------------------- */
 
-/* 기본 css */
+header {background: url(../img/header.svg) no-repeat;
+  /* backgroud가 고양이 모양: url로 고양이 모양 연결하기
+      no-repeat 넣고 center 넣으면 고양이 머리만 사라짐 
+      top 쓰면 몸통이 사라지고 고양이 머리만 나타남
+      /cover 쓰기
+       */
+       height: 190px;
+       /* 70px이 고양이 머리만 보이는 수준 최소 120px 이상으로 적정 170에서180 */
+       background-size: cover;
+       background-position: center top;
+       margin-top: 40px;}
 
-/* 로고설정 */
-.logo {font-size: 90px;
-    font-weight: normal;
-    font-family:'Amatic SC', cursive;
-    color: rgba(59, 49, 0, 0.623);
-    text-decoration: none;
-    text-align: center;
-    margin-top: 90px;}
-
-header p {font-size: 28px;
-    font-weight: normal;
-    font-family: 'Noto Sans KR', sans-serif;
-    color: rgba(59, 49, 0, 0.438);
-    text-decoration: none;
-    text-align: center;
-    margin-top: 30px; }
-
-/* container 설정 */
-
-.container {display: flex;
+header .logo {font-size: 60px;
+  color: rgba(59, 49, 0, 0.623);
+  text-align: center;
+  font-family: "Amatic SC", cursive;
+  padding: 30px;
+  font-weight: normal;
 }
-.container .main_section {width: 70%;
-                          margin-bottom: 0;
-                          background-color: #fff;
-                          }
-.container .post_home {}
-.container .post_title {margin-top: 80px;
-                        margin-bottom: 20px;}
 
-.post_title h2 {}
+.container {
+  background-color: #fff;
 
-.post_title a {font-size: 35px;
-                font-weight: bold;
-             text-decoration: none;
-             color: rgba(59, 49, 0, 0.623);}
+  border-radius: 0 0 10px 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 16px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
 
-.post_img a::after{content: "";
-                  display: block;
-                  clear:both;}
+header>p {font-size: 18px;
+  color: rgba(32, 27, 0, 0.555);
+  text-align: center;
+  margin: 20px 0;}
+
+
+/* 포스트 내용 */
+
+.post_home {margin-bottom: 70px;
+            position: relative;}
+
+.post_title {}
+
 
 .post_img {float: left;
-  width: 30px;
-            height: auto;}
-.post_img .date {display: block;
-    font-family:'Amatic SC', cursive;
-            font-size: 35px;
-            border-bottom: dotted 10px #fff;
-            background-color: rgb(185, 224, 224);
-            
-            
-            }
+          shape-outside: circle();
+          position: relative;}
+
+.post_img p {}
 
 
-.post_img img {}
+.post_img img {border-radius: 40% 70% 50% 30%/50%;
+object-fit: cover;
+height: 180px;
+width: 220px;
+margin-right: 50px;
+margin-bottom: 30px;}
 
-.post_Story{}
+.post_img .date {
+position: absolute;
+left: 0;
+top: -10px;
+font-size: 24px;
+width: 80px;
+height: 80px;
+background-color: #93d8d0;
+text-align: center;
+font-family: "Amatic SC", cursive;
+color: #fff;
+border-radius: 35% 50% 40% 40%; 
+letter-spacing: 3px;
 
-.post_more{}
+}
 
 
+.post_img .date span {
+  border-bottom: 3px rgb(237, 237, 237) dotted;
+  padding-bottom: 2px;
+  padding-top: 5px;
+  display: block;
+  width: 50%;
+  margin: 5px auto 0;
+  font-size: 18px;}
 
-
-
-
-.side_section {margin-bottom: 30px;}
-.side_section .cat {margin-top: 0;
-                    margin-top: 0;
-                  border-bottom: 10px;
-                font-size: 20px;}
-
-  /* 푸터 영역 */
-
-  .footer {width: 100%;
+  .post_story {
+    font-size: 18px;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    color: rgba(32, 27, 0, 0.555);
   }
+
+  .post_home::after{
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+  .post_more {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: -30px;
+    padding-right: 10px;
+    }
+
+.post_more>a {
+  background-color: #ffc4c4;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  display: inline-block;
+  border: 3px dashed #f7a8a8;
+  box-shadow: 0 0 0 3px #ffc4c4;
+  margin-bottom: 0px;
+}
+
+.post_more>a:hover { color: #fff;
+             background: #f7a8a8;
+             box-shadow: 0 0 0 3px #f7a8a8; 
+             border: 3px dashed #ffc4c4;}
+
+
+/* 포스트 제목 */
+.post_title {
+  background-image: linear-gradient(45deg ,  #fff 30%, #ccc 30%,  #ccc 50%, #fff 50%, #fff 80%, #ccc 80%, #ccc 100% );
+  background-size: 7px 7px;
+  padding-bottom: 7px;
+  margin-bottom: 15px;}
+
+  .post_title h2 {
+    background-color: #fff;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    list-style: 1.5;
+  }
+
+.post_title h2 a {
+  text-decoration: none;
+color: rgba(32, 27, 0, 0.555);
+}
+
+.post_title a:hover  {color: rgba(5, 4, 0, 0.623);}
+
+
+/* 사이드 구간 설정 */
+.side_section {}
+
+.side_section>div {
+
+margin-bottom: 40px;
+border: 1px solid #ccc;
+outline: 2px solid #ccc;
+outline-offset: 4px;
+border-radius: 6px;
+padding: 16px;
+
+}
+
+.side_section>div>h3 {
+  font-size: 30px;
+  font-family: "Amatic SC", cursive;
+  color: rgba(32, 27, 0, 0.555);
+  margin-top: 14px;
+  margin-bottom: 18px;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 3px;
+
+}
+
+.side_section>div ul {list-style:none;
+}
+
+.side_section>div li{border-bottom: 1px dashed #ccc;
+                      display: flex;
+                      align-items: center;}
+
+.side_section>div li::before{content: ""; 
+  width: 8px;
+height: 8px;
+border-radius: 50%;
+background-color: #93d8d0;
+display: inline-block;
+align-items: center;
+margin-right: 10px;}
+
+
+.side_section>div a{text-decoration: none;
+  padding: 16px 0;
+  display: block;
+  color: rgba(32, 27, 0, 0.555);
+flex: 1;}
+
+.news p {
+  font-size: 14px;
+  color: rgba(32, 27, 0, 0.555);
+  line-height: 1.6;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.news form {display: flex;}
+
+.news input {padding: 16px;}
+
+.news input:focus {outline: none;}
+
+
+.news input[type='email']{width: 70%;
+                          border-radius: 10px 0 0 10px;
+                          border: 2px solid #ccc;
+                          border-right: none;
+                          }
+
+.news input[type='email']::placeholder{color: ccc;}
+
+.news input[type='submit']{width: 30%;
+  border-radius: 0 10px 10px 0;
+  background-color:#ffc4c4;
+border: none;
+color: #fff;
+font-size: 18px;
+cursor: pointer;
+padding: 10px;
+text-align: center;
+margin-left: -5px;}
+
+.news input[type='submit']:hover {
+  background:   #f7a8a8; ;}
+
+
+
+/* 페이지네이션 영역 */
+.pagination {display: flex;
+              justify-content: center;}
+.pagination li {}
+.pagination li a {}
+
+.pagination .current {}
+
+
+
+
+
+
+/* 미디어 쿼리 구간--------------------------------------------------------------------------------------------------- */
+/* 660px 이상 구간 */
+@media(min-width:600px){
+  .container{
+    display: flex;
+    justify-content: space-around;
+  }
+  .main_section {
+    width: 68%;
+  }
+  .side_section {
+    width: 26%;
+  }
+}
+
+/* 1140px 이상 구간 */
+@media(min-width:1100px){
+header,.container{
+  width: 1000px;
+  margin: 0 auto;
+}
+header{
+  margin-top: 40px;
+
+}
+}

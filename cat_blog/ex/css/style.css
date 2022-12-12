@@ -1,28 +1,29 @@
-@charset "utf-8";
+@charset "UTF-8";
+
+/* 구글 폰트 : 글씨 */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
 
+/* 전체 설정 */
 * {
   margin: 0;
   padding: 0;
 }
-
 ul,
 ol {
   list-style: none;
 }
-a {
-  text-decoration: none;
-}
 
+/* body 전체 설정 */
 body {
-  background-image: linear-gradient(to left, #faf6ed 50%, #efe8d5 50%);
+  background-image: linear-gradient(to left, #efe8d5 50%, #faf6ed 50%);
   background-size: 80px 100%;
 }
+/* 뒤에 줄무늬 배경 만들기 방법 */
 
-/* header 설정 --------------------------------------------------------------- */
+/* header 설정 ----------------------------------------------------  */
 header {
-  background-image: url(../img/header.svg);
+  background-image: url(../../img/header.svg);
   height: 190px;
   background-size: cover;
   background-position: center top;
@@ -31,11 +32,18 @@ header {
 
 header .logo {
   font-size: 60px;
-  color: #949087;
+  color: rgba(59, 49, 0, 0.623);
   text-align: center;
   font-family: "Amatic SC", cursive;
-  padding-top: 30px;
   font-weight: normal;
+  padding-top: 30px;
+}
+
+header p {
+  color: rgba(59, 49, 0, 0.623);
+  text-align: center;
+  font-size: 18px;
+  margin: 20px 0;
 }
 
 .container {
@@ -50,94 +58,14 @@ header .logo {
   -moz-box-sizing: border-box;
 }
 
-header > p {
-  color: #949087;
-  text-align: center;
-  font-size: 18px;
-  margin: 20px 0;
-}
-
 /* 포스트 내용 */
 
 .post_home {
-  margin-bottom: 48px;
-  position: relative;
-}
-.post_title {
-}
-
-.post_img {
-  float: left;
-  shape-outside: circle();
+  margin-bottom: 50px;
   position: relative;
 }
 
-.post_img p {
-}
-.post_img img {
-  border-radius: 40% 70% 50% 30%/50%;
-  object-fit: cover;
-  height: 180px;
-  width: 220px;
-  margin-right: 40px;
-}
-
-.post_img .date {
-  position: absolute;
-  left: 0;
-  top: -10px;
-  font-size: 24px;
-  width: 80px;
-  height: 80px;
-  background-color: #93d8d0;
-  text-align: center;
-  font-family: "Amatic SC", cursive;
-  color: #ffffff;
-  border-radius: 30% 60% 50% 70% /50%;
-}
-
-.post_img .date span {
-  display: block;
-}
-
-.post_story {
-  font-size: 18px;
-  margin-bottom: 16px;
-  line-height: 1.6;
-  color: #949087;
-}
-
-.post_home::after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
-.post_more {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin-bottom: -20px;
-}
-.post_more a {
-  background-color: #eda1a1;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #fff;
-  padding: 10px 20px;
-  display: inline-block;
-  border: 2px dashed #e38787;
-  box-shadow: 0 0 0 5px #eda1a1;
-}
-
-.post_more a:hover {
-  color: #fff;
-  background-color: #e38787;
-  box-shadow: 0 0 0 5px #e38787;
-  border: 2px dashed #eda1a1;
-}
-
-/* 포스트 제목 */
+/* 포스트 타이틀 내용 */
 .post_title {
   background-image: linear-gradient(
     45deg,
@@ -168,13 +96,92 @@ header > p {
 }
 
 .post_title h2 a {
-  color: #949087;
+  color: rgba(59, 49, 0, 0.623);
   text-decoration: none;
+}
+
+.post_title a:hover {
+  color: #000;
+}
+
+/* 포스트 이미지 내용 */
+
+.post_img {
+  float: left;
+  shape-outside: circle();
+  position: relative;
+}
+
+.post_img img {
+  border-radius: 40% 70% 50% 30%/ 50%;
+  object-fit: cover;
+  height: 180px;
+  width: 220px;
+  margin-right: 50px;
+}
+
+.post_img .date {
+  position: absolute;
+  left: 0;
+  top: -10px;
+  font-size: 24px;
+  width: 80px;
+  height: 80px;
+  background-color: #93d8d0;
+  text-align: center;
+  font-family: "Amatic SC", cursive;
+  color: #fff;
+  border-radius: 40% 60% 50% 70%/ 50%;
+}
+
+.post_img .date span {
+  display: block;
+  padding-top: 8px;
+}
+
+.post_story {
+  color: rgba(59, 49, 0, 0.623);
+  font-size: 18px;
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+.post_home::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.post_more {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: -20px;
+}
+
+.post_more a {
+  background-color: #ffc4c4;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  display: inline-block;
+  border: 3px dashed #f7a8a8;
+  box-shadow: 0 0 0 5px #ffc4c4;
+  margin-bottom: 0;
+}
+
+.post_more a:hover {
+  color: #fff;
+  background-color: #f7a8a8;
+  box-shadow: 0 0 0 5px #f7a8a8;
+  border: 3px dashed #ffc4c4;
 }
 
 /* 사이드 구간 설정 */
 .side_section {
 }
+
 .side_section > div {
   margin-bottom: 40px;
   border: 1px solid #ccc;
@@ -183,21 +190,24 @@ header > p {
   border-radius: 6px;
   padding: 16px;
 }
+
 .side_section > div > h3 {
   font-size: 30px;
   font-family: "Amatic SC", cursive;
-  color: #949087;
+  color: rgba(59, 49, 0, 0.623);
   margin-top: 14px;
   margin-bottom: 18px;
   text-align: center;
-  font-weight: normal;
+  font-weight: 500;
   letter-spacing: 3px;
 }
+
 .side_section > div ul {
   list-style: none;
 }
+
 .side_section > div li {
-  border-bottom: 1px dashed #cccccc;
+  border-bottom: 1px dashed #ccc;
   display: flex;
   align-items: center;
 }
@@ -215,16 +225,16 @@ header > p {
 
 .side_section > div a {
   text-decoration: none;
-  padding: 16px 0;
+  padding: 10px;
   display: block;
-  color: #949087;
+  color: rgba(59, 49, 0, 0.623);
   flex: 1;
+  /* 동그라미 원 모양 때문에 flex 1 */
 }
 
 .news p {
   font-size: 14px;
-  color: #949087;
-  line-height: 1.6;
+  color: rgba(59, 49, 0, 0.623);
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -232,10 +242,10 @@ header > p {
 .news form {
   display: flex;
 }
-
 .news input {
   padding: 16px;
 }
+
 .news input:focus {
   outline: none;
 }
@@ -246,6 +256,7 @@ header > p {
   border: 2px solid #ccc;
   border-right: none;
 }
+
 .news input[type="email"]::placeholder {
   color: #ccc;
 }
@@ -253,10 +264,10 @@ header > p {
 .news input[type="submit"] {
   width: 30%;
   border-radius: 0 10px 10px 0;
-  background-color: #eda1a1;
+  background-color: #ffc4c4;
   border: none;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   padding: 10px;
   text-align: center;
@@ -264,28 +275,28 @@ header > p {
 }
 
 .news input[type="submit"]:hover {
-  background: #e38787;
+  background: #f7a8a8;
 }
 
-/* 페이지네이션 영역 */
+/* 퍼지네이션 영역 */
 .pagination {
   display: flex;
   justify-content: center;
 }
-
 .pagination li {
-  margin: 0 10px;
+  margin: 0 5px;
 }
 .pagination li a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   font-size: 18px;
-  color: #949087;
+  color: rgba(59, 49, 0, 0.623);
   width: 36px;
   height: 36px;
   /* 짝수 개념으로만들기 */
   border-radius: 50%;
+  text-decoration: none;
 }
 
 /* 정답은 없지만 내가 기준 잡기, 글씨를 담은 최종 태그에게 기준으로하기
@@ -300,77 +311,79 @@ a를 담고있는 그릇이다. 글씨 */
 
 .pagination li:last-child a:hover {
   background-color: transparent;
-  color: #949087;
+  /* 투명값 */
+  color: rgba(59, 49, 0, 0.623);
   text-decoration: underline;
 }
 
-.pagination .current a {
-  background-color: #ccc;
+.pagination li:first-child a {
+  background-color: rgb(214, 210, 185);
   color: #fff;
 }
 
 .pagination li:first-child a:hover {
-  background-color: #ccc;
+  background-color: rgb(214, 210, 185);
   color: #fff;
   opacity: 0.8;
 }
 
 /* 페이지와페이지의 구분라인  */
-
-.pagination li:after {
+.pagination li::after {
   content: "\2027";
   margin-left: 20px;
-  color: #949087;
+  color: rgb(214, 210, 185);
 }
 
-.pagination li:last-child:after {
+.pagination li:last-child::after {
   content: "\0020";
   margin-left: 20px;
-  color: #949087;
+  color: rgb(214, 210, 185);
 }
-.pagination li:nth-child(4):after {
-  content: "\0020";
+
+.pagination li:nth-child(4)::after {
+  contn: "\0020";
   margin-left: -10px;
-  color: #949087;
+  color: rgb(214, 210, 185);
 }
 
 /* 푸터설정 */
 footer {
-  background-color: #949087;
+  background-color: #bbb6a9;
   text-align: center;
-  padding: 48px;
-  margin-top: 60px;
+  padding: 30px;
+  margin-top: 30px;
 }
+
 footer ul {
   display: flex;
   justify-content: center;
 }
+
 footer li {
   margin: 0 12px;
 }
+
 footer li a {
   display: block;
   color: #fff;
+  text-decoration: none;
 }
 footer li a:hover {
   color: #000;
 }
-
 footer p {
   font-size: 14px;
-  color: #333;
   margin-top: 20px;
+  color: #333;
 }
 
 /* 미디어 쿼리 구간 */
-
 /* 600px 이상 구간 */
 @media (min-width: 600px) {
   .container {
     display: flex;
     justify-content: space-between;
   }
-
   .main_section {
     width: 68%;
   }
