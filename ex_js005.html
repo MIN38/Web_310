@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex_js005.HTML</title>
+</head>
+<body>
+    
+
+    <h1>날짜 기입하기</h1>
+
+    
+    <script>
+            let now = new Date();
+            let year = now.getFullYear()
+            let mon = now.getMonth()+1;
+            // 자바스크립트는 0부터 시작하기 때문에 그대로 적으면 11이 나오니 +1 적어주기
+            let date = now.getDate()
+            let day = now.getDay()
+            let hour = now.getHours()
+            let minute = now.getMinutes()
+            let second = now.getSeconds()
+
+
+            // 시간은 getHours()/ 분 getMinutes()/ 초 getSeconds()
+            document.write(now+"<br>")
+            document.write(year+"<br>")
+            document.write(mon+"<br>")
+            document.write(date+"<br>")
+            document.write(day+"<br>")
+            document.write(hour+"<br>")
+            document.write(minute+"<br>")
+            document.write(second+"<br>")
+
+    </script>
+
+
+
+
+
+
+<div id="wrap">
+    <h1>안녕하세요</h1>
+    오늘은 <span></span>년 <span></span>월 <span></span>일 입니다.
+    <p>현재시간을 확인하려면 버튼을 클릭하세요</p>
+     <button id="btn">시간확인</button>
+</div>
+
+
+<script>
+            let anow = new Date();
+            let ayear = now.getFullYear()
+            let amon = now.getMonth()+1;
+            // 자바스크립트는 0부터 시작하기 때문에 그대로 적으면 11이 나오니 +1 적어주기
+            let adate = now.getDate()
+            let aday = now.getDay();
+            let ss = document.getElementsByTagName('span')
+            let ahour = now.getHours()
+            let aminute = now.getMinutes();
+            let asecond = now.getSeconds()
+            // 시간은 getHours()/ 분 getMinutes()/ 초 getSeconds()
+
+
+            // document.write(anow+"<br>")
+            // document.write(ayear+"<br>")
+            // document.write(amon+"<br>")
+            // document.write(adate+"<br>")
+            // document.write(aday+"<br>")
+            // document.write(ahour+"<br>")
+            // document.write(aminute+"<br>")
+            // document.write(asecond+"<br>")
+
+ss[0].innerHTML = ayear
+ss[1].innerHTML = amon
+ss[2].innerHTML = adate
+    
+    document.getElementById('btn').addEventListener('click',
+    function(){
+        alert('현재시간은'+ahour+'시'+aminute+'분'+asecond+'초입니다.')
+    })
+    
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+/* 전체설정- 기본설정으로 해두면 편하다 */
+*{margin: 0;
+padding: 0;}
+
+ul {list-style: none;}
+
+a{text-decoration: none;
+color:rgb(255, 255, 255);}
+
+img {border: none;
+    vertical-align: bottom;}
+
+html {scroll-behavior: smooth;}
+/* 스무스 스크롤 */
+
+/* 전체화면 설정 */
+.wrapper{width: 1200px;
+        margin: 0 auto;}
+
+section h2 {text-align: center;}
+
+section {height: 800px;}
+  /* 화면은 전체화면으로 옮기기전 임의설정 */
+
+#about{background-color: #ddd;}
+#news{background-color: #ccc;}
+#department{background-color: #bbb;}
+#consulting{background-color: #aaa;}
+
+  /* 헤더 설정 */
+header {
+    background-color: rgb(2, 71, 128);
+    width: 100%;
+    /* height는 왠만하면 주지말기 */
+    padding: 16px 0;
+    position: fixed; 
+    /* abso :자유롭게 rele: 기준, fixed :내가 보는 화면 기준, 항상 그위치에 있는 것 같음 */
+    left: 0;
+    top: 0;
+}
+
+header .wrapper {display: flex;
+justify-content: space-between;}
+/* 덩어리인 부모자를 움직여서 오른쪽 정렬을 맞추기 */
+
+header.logo {display: block;
+            font-size: 20px;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;}
+        
+nav ul {display: flex;}
+
+nav li {}
+
+nav li a {display: block;
+font-size: 20px;
+color: #fff;
+font-weight: bold;
+padding: 10px 20px;}
+
+/* 메인 이미지 설정 */
+.mainImg {text-align: center;
+          height: 300px;
+                /* 임의설정 */
+                background-color:#75c7f7;
+                background-image: url(../../ex/img/analysis-4402809_1920.jpg);
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-blend-mode: screen;
+                display: flex;
+                align-items: center;
+                animation: ch 24s infinite;
+        }
+
+    /* 애니메이션 설정 */
+    @keyframes boldh3{
+      0%{font-weight: bold;
+        font-size: 20px;}
+        100%{font-weight: normal;
+          font-size: 60px;}
+
+    }
+
+
+    @keyframes ch {
+      0%{background-color:#75c7f7 ;}
+      12.5%{background-color:#1665cc ;}
+      25% {background-color:#b473bf ;}
+      37.5%{background-color:#ffb2c1 ;}
+      50%{background-color:#ff9f67 ;}
+      62.5%{background-color:#ffd673 ;}
+      75%{background-color: #a2e29b;}
+      87.5%{background-color:#00a2af ;}
+      100%{background-color: #75c7f7;}
+  }
+
+  .mainImg h3 {font-weight: bold;
+  font-size: 20px;
+  animation: boldh3 3s infinite alternate ;}
+
+  /* 인피니트 메이트 쓰는 방법 배우기 */
