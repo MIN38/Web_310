@@ -1,53 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>조건문예제- 평균값내기</title>
+    <title>조건문예제- 평균값내기(성적표 과제)</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
-    body {background-image: linear-gradient(to left, #eeeeee 50%,#ffffff 50%);
-        background-size: 20px 100%;
-        font-family: 'Do Hyeon', sans-serif;
-        }
-    h1 {font-size: 60px;
-        text-align: center;
-    letter-spacing: 20px;
-color: #989898;
-}
-.table {width: 80%;
-    margin: 0 auto;
-}
-.table ul {text-align: center;
-   display: flex;
-list-style: none;
-margin: 0;
-padding: 0;
-flex-wrap: wrap; width: 100%;}
-.title li {background-color: beige;
-        padding: 20px;
-        color: rgb(225, 140, 4);
-        font-size: 30px;
-       flex: 1;
-    margin: 0 2px; }
-.write li {background-color:#f3877f ;
- height: 80px;
- font-size: 28px;
- color: #fff;
- flex: 1; 
- margin: 0 2px;
- display: flex;
-    justify-content: center;
-align-items: center;   }
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
 
-#result {text-align: center;
-color: #ff6688;
-font-size: 78px;
-margin-top: 50px;
-}
-    
+        body {
+            background-image: linear-gradient(to left, #fffc 50%, #f3e9d176 50%);
+            background-size: 20px 100%;
+            font-family: 'Jua', sans-serif;
+        }
+
+        h1 {
+            font-size: 60px;
+            text-align: center;
+            letter-spacing: 20px;
+            color: #f38181
+        }
+
+        .table {
+            width: 80%;
+            margin: 0 auto;
+
+        }
+
+        .table ul {
+            text-align: center;
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .title li {
+            background-color: #c6e5f3;
+            padding: 15px;
+            color: rgb(0, 0, 0);
+            font-size: 35px;
+            flex: 1;
+            margin: 0 2px;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .write li {
+            background-color: #084a83;
+            height: 80px;
+            font-size: 28px;
+            color: #fff;
+            flex: 1;
+            margin: 0 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0 0 20px 20px
+        }
+
+        #result {
+            text-align: center;
+            color: #f377b7;
+            font-size:50px;
+            margin-top: 70px;
+        }
+
+        input {
+            font-family: 'Jua', sans-serif;
+            background: none;
+            width: 40px;
+            padding: 5px 10px;
+            font-size: 30px;
+            flex: 1;
+            text-align: center;
+            outline: none;
+            border: none;
+            color: #fff;
+        }
     </style>
 </head>
 
@@ -62,13 +95,103 @@ margin-top: 50px;
             <li>평균</li>
         </ul>
         <ul class="write">
-            <li id="kor"></li>
-            <li id="math"></li>
-            <li id="eng"></li>
+            <li id="kor"><input type="text" class="kor" /></li>
+            <li id="math"><input type="text" class="math" /></li>
+            <li id="eng"><input type="text" class="eng" /></li>
             <li id="add"></li>
             <li id="avg"></li>
         </ul>
     </div>
+    <div id="result"></div>
+    <script>
+
+        // let kor = Number(prompt('국어점수는?'));
+        // let math = Number(prompt('수학점수는?'));
+        // let eng = Number(prompt('영어점수는?'));
+
+        let kor = document.querySelector('.kor');
+        let math = document.querySelector('.math');
+        let eng = document.querySelector('.eng');
+        let add = document.querySelector('#add');
+        let avg = document.querySelector('#avg');
+
+        let write = document.querySelector('.write');
+        let result = document.querySelector('#result');
+
+        //   querySelector :선택된 요소중 첫번째 요소만 선택 / 태그를 제외하고 
+        //             클래스/아이디 를 부를때는 CSS와 동일하게 부름 
+
+
+
+        write.addEventListener('keyup', () => {
+            Value();
+        });
+        //   무언가를 입력할때 키보드를 눌렀다가 땠을때 오른쪽의 함수를 실행하라
+        function Value() {
+            let sKor = kor.value;
+            let sMath = math.value;
+            let sEng = eng.value;
+            //   값을 Value 입력할때마다 함수를 호출
+            // querySelector로 input부분에서 가져오기 
+            // kor.value은 class="kor"인 input의 값을 가져옴
+            // 가져온 값을 sKor 라는 변수로 바꿔줌
+
+            if (!sKor.length || !sMath.length || !sEng.length) {
+                return;
+            }
+
+            // | 은 or 연산자 ( 뜻 : 또는 ), &&은 and
+            // {} 중괄호 안에 console.log(e) 한다음 국어, 영어, 수학 아무곳이나 값을 입력하면 콘솔창에서
+            // or은 하나라도 true 값이면 true, and는 전부 true여야 true로 됨
+            // 국어 수학 영어 중 하나라도 true 이면 true로 되서 if문 실행 가능
+            // !는 true이면 false로 바꿔주고 false면 true바꿔 줌
+            // return은 함수를 종료 시킴 
+            // 따라서 하나라도 true에 해당되면 함수 빠져나가서 아래 코드 실행하지 마라 는 뜻
+            // sKor.length 요거가 class="kor"인 input에 입력된 값의 길이
+            // 아직 다른 input이 입력 안되었다면 나머지는 value값이 없어서 길이가 0 이다
+            // true, false boolean 타입에서 숫자로 치면 0은 false 나머지 숫자 값이 있으면 true로
+            // value값이 없어서 length가 0이면 false이다,
+            // if문 실행 위해서 ! 붙여가지고 true값 나오게 바꿔줌
+            // subKor.length == 0 || subMath.length == 0 || subEng.length == 0 이렇게 바꿔 쓸 수 있으며
+            // == 0 대신 !붙인 것이다. 숫자 0이면 false이고 그 외 나머지는 true로 된다.
+            // 위의 코드를 넣은 이유는 국어 수학 영어 셋 중 하나라도 값 입력 안됐으면 성적 산출 안되게 하기 위해서 이다.
+            // 결론: (!subKor.length || !subMath.length || !subEng.length) 이부분이 각 kor, math, eng input부분에 값
+            // 값이 입력 됐는지 확인하면서 입력 안된 값 있으면 그거 true로 하고 함수 빠져나가게 하기 위함
+
+
+            let resultAdd = Number(sKor) + Number(sMath) + Number(sEng);
+            let resultAvg = Math.round(
+                (Number(sKor) + Number(sMath) + Number(sEng)) / 3
+            );
+            // -----------------------------------------------
+            add.innerHTML = resultAdd;
+            avg.innerText = resultAvg;
+
+            if (resultAvg >= 90) {
+                result.innerHTML = '당신은 A학점 입니다.';
+            } else if (resultAvg >= 80 && resultAvg < 90) {
+                result.innerHTML = '당신은 B학점 입니다.';
+            } else if (resultAvg >= 70 && resultAvg < 80) {
+                result.innerHTML = '당신은 C학점 입니다.';
+            } else if (resultAvg >= 60 && resultAvg < 70) {
+                result.innerHTML = '당신은 D학점 입니다.';
+            } else {
+                result.innerHTML = '당신은 F학점 입니다.';
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
 
 </body>
+
 </html>
